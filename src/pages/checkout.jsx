@@ -13,6 +13,7 @@ const Checkout = () => {
         if (response.ok) setProductList(products)
       }
     getProducts();
+    // eslint-disable-next-line
   }, []);
 
 
