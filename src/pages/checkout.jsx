@@ -14,7 +14,7 @@ const Checkout = () => {
       }
     getProducts();
     // eslint-disable-next-line
-  }, []);
+  }, [response, get]);
 
 
   if(productList.lenth > 0 && loading) { return }
