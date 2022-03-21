@@ -1,0 +1,11 @@
+.matrix div {
+  background-color: blue;
+    flex: 0 0 25%;
+    height: 220px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+.matrix {
+  display: flex;
+  flex-wrap: wrap;
+}
