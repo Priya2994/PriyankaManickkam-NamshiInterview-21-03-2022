@@ -8,13 +8,13 @@ const Checkout = () => {
   const { get, response, loading } = useFetch("https://fakestoreapi.com");
  
   useEffect(() => {
+    async function getProducts() {
+        const products = await get('/products?limit=5')
+        if (response.ok) setProductList(products)
+      }
     getProducts();
   }, []);
 
-  async function getProducts() {
-    const products = await get('/products?limit=5')
-    if (response.ok) setProductList(products)
-  }
 
   if(productList.lenth > 0 && loading) { return }
 
