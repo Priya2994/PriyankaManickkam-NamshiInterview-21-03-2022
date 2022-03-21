@@ -5,7 +5,7 @@ import ProductLists from '../components/checkout/product-lists';
 
 const Checkout = () => {
   const [productList, setProductList] = useState([]);
-  const { get, response, loading, error } = useFetch("https://fakestoreapi.com");
+  const { get, response, loading } = useFetch("https://fakestoreapi.com");
  
   useEffect(() => {
     getProducts();
@@ -17,7 +17,7 @@ const Checkout = () => {
   }
 
   if(productList.lenth > 0 && loading) { return }
-  
+
   return (
       <Box p={3}>
           <Typography variant="h3">All Items</Typography>
